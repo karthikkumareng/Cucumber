@@ -19,9 +19,28 @@ private WebElement BtnSignIn;
 @FindBy(xpath = "//*[@class='welcome-notification fl mt2']")
 private WebElement txtUserName;
 
+@FindBy(xpath = "(//*[text()='Please fill all mandatory fields'])[1]")
+private WebElement AlertMessage;
+
+@FindBy(xpath = "(//*[@class='el-message__content'])[1]")
+private WebElement Invaliddata;
+
+
+
+
 
 public AnbEtrackLoginpage () {
 	PageFactory.initElements(driver, this);
+}
+
+
+public WebElement getAlertMessage() {
+	return AlertMessage;
+}
+
+
+public void setAlertMessage(WebElement alertMessage) {
+	AlertMessage = alertMessage;
 }
 
 
@@ -63,5 +82,18 @@ public WebElement getTxtUserName() {
 public void setTxtUserName(WebElement txtUserName) {
 	this.txtUserName = txtUserName;
 }
+
+public WebElement getInvaliddata() {
+	return Invaliddata;
+}
+
+
+public void setInvaliddata(WebElement invaliddata) {
+	Invaliddata = invaliddata;
+}
+
+
+
+
 
 }

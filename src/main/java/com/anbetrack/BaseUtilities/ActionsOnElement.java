@@ -150,4 +150,10 @@ e.printStackTrace();
 }
 return mapDatasList;
 }
+
+public String getReportConfigPath(){
+	 String reportConfigPath = "E:/Velmurugan/AnbETrack/src/main/java/com/anbetrack/config/extent-config.xml";
+	 if(reportConfigPath!= null) return reportConfigPath;
+	 else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath"); 
+	}
 }
